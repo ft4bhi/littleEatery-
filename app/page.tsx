@@ -1,18 +1,17 @@
-import Navbar from "@/components/navbar";
-import FoodSlide from "@/components/food";
-import MainSection from "@/components/mainsection"; // Corrected to PascalCase
-import ShortListInfo from "@/components/shortinfo";
-import Footer from "@/components/footer";
+import Navbar from "@/components/home/navbar";
+
+import Header from "@/components/home/hero";
+import InfoSection from "@/components/home/contact";
+import TrendingFood from "@/components/home/trendingFood";
+import Footer from "@/components/home/footer";
 
 export default function Home() {
   return (
     <div>
       <Navbar />
-      {/* Uncomment the below lines if you intend to use them */}
-      {/* <Reviews /> */}
-      {/* <FoodSlide /> */}
-      {/* <MainSection /> */}
-      {/* <ShortListInfo /> */}
+      <Header />
+      <InfoSection />
+      <TrendingFood />
       <Footer />
     </div>
   );
