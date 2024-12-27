@@ -25,7 +25,7 @@ const Navbar = () => {
               objectFit="contain"
             />
           </div>
-          <div>The Little Eatery</div>
+          <div className="font-montserrat">The Little Eatery</div>
         </div>
 
         {/* Desktop Navigation */}

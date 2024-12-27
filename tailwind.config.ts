@@ -11,7 +11,9 @@ const config: Config = {
       fontFamily: {
         poppins: ['var(--font-poppins)', 'sans-serif'],
         inter: ['var(--font-inter)', 'sans-serif'],
-        davidLibre: ['var(--font-david-libre)', 'serif'], // Define Poppins font
+        davidLibre: ['var(--font-david-libre)', 'serif'],
+        montserrat: ['var(--font-montserrat)', 'sans-serif'],
+         // Define Poppins font
       },
       colors: {
         background: "var(--background)",

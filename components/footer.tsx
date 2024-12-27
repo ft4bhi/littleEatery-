@@ -140,7 +140,7 @@ const Footer = memo(() => {
         </div>
         <div className="relative">
           <input
-            className="p-3 rounded-full shadow-xl"
+            className="p-3 rounded-full shadow-xl "
             placeholder="Enter your email..."
             type="email"
           />

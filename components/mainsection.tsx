@@ -20,7 +20,7 @@ const mainsection = () => {
     <div className=" md:w-full bg-white relative flex flex-col md:flex-row md:justify-around items-center justify-end h-[600px] md:h-full">
       <div className=" w-full md:w-[50%]  flex flex-col px-10 md:px-20 z-30">
         <div className="md:pt-32 pt-16 w-full md:w-[600px] text-wrap">
-          <b className="sm:text-[40px] text-[37px] md:text-[78px]  tracking-[0.01em] leading-[120%] text-white md:text-black ">
+          <b className="sm:text-[40px] font-poppins text-[37px] md:text-[78px]  tracking-[0.01em] leading-[120%] text-white md:text-black ">
             Don't wanna Make you Have A Bad day
           </b>
         </div>
