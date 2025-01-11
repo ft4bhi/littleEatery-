@@ -1,19 +1,25 @@
 "use client";
-import { ChevronLeft, ChevronRight } from "lucide-react";
-import { useState, useEffect } from "react";
 
-const Carousel = ({ children: slides }) => {
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import { useState, useEffect, ReactNode } from "react";
+
+interface CarouselProps {
+  children: ReactNode[]; // Define the type for slides
+}
+
+const Carousel: React.FC<CarouselProps> = ({ children: slides }) => {
   const [curr, setCurr] = useState(0);
 
   const next = () =>
     setCurr((curr) => (curr === slides.length - 1 ? 0 : curr + 1));
+
   const prev = () =>
     setCurr((curr) => (curr === 0 ? slides.length - 1 : curr - 1));
 
   useEffect(() => {
     const interval = setInterval(next, 3000); // Automatically slide every 3 seconds
     return () => clearInterval(interval); // Cleanup interval on component unmount
-  }, []); // No dependency for single initialization
+  }, [slides.length]); // Dependency on slides length for safety
 
   return (
     <div className="relative w-full md:h-[500px] h-[600px] overflow-hidden">
@@ -27,7 +33,7 @@ const Carousel = ({ children: slides }) => {
             key={index}
             className="w-full flex-shrink-0"
             style={{
-              backgroundSize: "cover", // Adjust background size to cover screen
+              backgroundSize: "cover",
               backgroundPosition: "center",
               boxShadow: "-2px -4px 5px rgba(0, 0, 0, 0.5)",
             }}
@@ -70,3 +76,4 @@ const Carousel = ({ children: slides }) => {
 };
 
 export default Carousel;
+

@@ -22,7 +22,7 @@ const reviews = [
 ];
 
 const Reviews = () => {
-  const [sliderRef, setSliderRef] = useState(null);
+  const [sliderRef, setSliderRef] = useState<Slider | null>(null);
 
   const settings = {
     dots: true,
@@ -40,7 +40,7 @@ const Reviews = () => {
       </b>
       <Slider
         {...settings}
-        ref={(slider) => setSliderRef(slider)}
+        ref={setSliderRef}
         className="mt-12 mx-auto md:w-[60%] w-[75%]"
       >
         {reviews.map((review, index) => (
@@ -79,3 +79,4 @@ const Reviews = () => {
 };
 
 export default Reviews;
+
