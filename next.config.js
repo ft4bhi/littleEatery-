@@ -2,7 +2,7 @@
 const nextConfig = {
   output:'export',
   basepath:'/littleEatery',
-  assetPrefix:'/littleEatery/public/images'
+  assetPrefix:'/littleEatery'
 };
 
 module.exports = nextConfig;
