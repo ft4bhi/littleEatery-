@@ -1,28 +1,33 @@
 "use client";
-
 import React, { useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
-const reviews = [
+type Review = {
+  name: string;
+  title: string;
+  text: string;
+};
+
+
+
+const reviews: Review[] = [
   {
     name: "Ama Ampomah",
     title: "CEO & Founder Inc",
     text: "Lorem ipsum dolor sit amet consectetur. Tortor massa nisl quam sit. Vitae congue ultrices neque penatibus mi in quisque.",
-    imgSrc: "./images/Rectangle 10.svg", // Adjusted path
   },
   {
     name: "Kweku Annan",
     title: "CEO & Founder Inc",
     text: "Lorem ipsum dolor sit amet consectetur. Tortor massa nisl quam sit. Vitae congue ultrices neque penatibus mi in quisque.",
-    imgSrc: "./images/Rectangle 10.svg", // Adjusted path
   },
 ];
 
 const Reviews = () => {
-  const [sliderRef, setSliderRef] = useState<Slider | null>(null);
+  const [sliderRef, setSliderRef] = useState<Slider | null>(null); // Set sliderRef type to Slider
 
   const settings = {
     dots: true,
@@ -40,21 +45,16 @@ const Reviews = () => {
       </b>
       <Slider
         {...settings}
-        ref={setSliderRef}
+        ref={(slider) => setSliderRef(slider)} // Here the type is Slider
         className="mt-12 mx-auto md:w-[60%] w-[75%]"
       >
         {reviews.map((review, index) => (
           <div
             key={index}
-            className="border-2 p-8 rounded-md relative flex flex-col items-center h-[250px]"
+            className="border-2 p-8 rounded-md relative flex flex-col items-center  h-[200px] gap-10 "
           >
-            <img
-              className="w-20 h-20 rounded-full mx-auto mb-4"
-              alt={`${review.name}'s photo`}
-              src={review.imgSrc}
-            />
-            <p className="mb-2 text-sm text-gray-700">{review.text}</p>
-            <b className="text-gray-900">{review.name}</b>
+            <p className="lg:mb-20 md:mb-16 mb-8 text-sm text-gray-700">{review.text}</p>
+            <b className="text-gray-900 ">{review.name}</b>
             <div className="text-sm text-gray-500">{review.title}</div>
           </div>
         ))}
