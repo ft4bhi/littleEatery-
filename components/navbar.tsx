@@ -18,7 +18,7 @@ const Navbar = () => {
         <div className="flex items-center font-poppins font-bold text-xl md:text-[26px] relative px-8 md:p-0 md:ml-0 ml-6">
           <div className="absolute left-[-20px] md:left-[-50px] -top-[13px]">
             <Image
-              src="/images/logo 2.png"
+              src="./images/logo 2.png"
               alt="Logo"
               width={40}
               height={40}

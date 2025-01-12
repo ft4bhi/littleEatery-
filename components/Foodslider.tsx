@@ -40,7 +40,7 @@ const FoodSlider = () => {
       name: "Burger",
       price: "$12",
       rating: "4.4",
-      img: "/images/burger.jpeg",
+      img: "./images/burger.jpeg",
     },
   ];
 

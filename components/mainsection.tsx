@@ -2,17 +2,17 @@ import Link from "next/link";
 import Carousel from "./carousel";
 
 const slides = [
-  "/images/foodimg-1.jpeg",
-  "/images/foodimg-2.jpeg",
-  "/images/foodimg-3.jpeg",
-  "/images/foodimg-4.jpeg",
-  "/images/4.jpeg",
-  "/images/1.jpeg",
-  "/images/2.jpeg",
-  "/images/3.jpeg",
-  "/images/5.jpeg",
-  "/images/6.jpeg",
-  "/images/7.jpeg",
+  "./images/foodimg-1.jpeg",
+  "./images/foodimg-2.jpeg",
+  "./images/foodimg-3.jpeg",
+  "./images/foodimg-4.jpeg",
+  "./images/4.jpeg",
+  "./images/1.jpeg",
+  "./images/2.jpeg",
+  "./images/3.jpeg",
+  "./images/5.jpeg",
+  "./images/6.jpeg",
+  "./images/7.jpeg",
 ];
 
 const mainsection = () => {
