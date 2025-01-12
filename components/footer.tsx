@@ -10,9 +10,10 @@ const Footer = memo(() => {
           src="/images/footerlogo.png"
           className="w-30 h-30 object-cover px-10"
           alt="logo"
+          
         />
       </div>
-      <div className="text-gray-600  lg:text-[15px] text-[15px] leading-tight flex gap-6">
+      <div className="text-gray-600  lg:text-[15px] text-[10px] md:leading-tight flex gap-6">
         <Link href="/" className="hover:text-blue-600 transition-colors">
           Contact Us
         </Link>
