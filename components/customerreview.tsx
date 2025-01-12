@@ -11,13 +11,13 @@ const reviews = [
     name: "Ama Ampomah",
     title: "CEO & Founder Inc",
     text: "Lorem ipsum dolor sit amet consectetur. Tortor massa nisl quam sit. Vitae congue ultrices neque penatibus mi in quisque.",
-    imgSrc: "/Rectangle 10.svg", // Adjusted path
+    imgSrc: "/images/Rectangle 10.svg", // Adjusted path
   },
   {
     name: "Kweku Annan",
     title: "CEO & Founder Inc",
     text: "Lorem ipsum dolor sit amet consectetur. Tortor massa nisl quam sit. Vitae congue ultrices neque penatibus mi in quisque.",
-    imgSrc: "/Rectangle 10.svg", // Adjusted path
+    imgSrc: "/images/Rectangle 10.svg", // Adjusted path
   },
 ];
 
