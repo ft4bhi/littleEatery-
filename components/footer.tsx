@@ -7,10 +7,10 @@ const Footer = memo(() => {
     <footer className="w-full bg-white flex flex-col sm:flex-row md:justify-between justify-center items-center  py-6 box-border text-base text-gray-600 font-h3 border-t border-gray-200 gap-6">
       <div>
         <img
-          src="/images/footerlogo.png"
+          src="./images/footerlogo.png"
           className="w-30 h-30 object-cover px-10"
           alt="logo"
-          
+
         />
       </div>
       <div className="text-gray-600  lg:text-[15px] text-[10px] md:leading-tight flex gap-6">
