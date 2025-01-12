@@ -62,14 +62,14 @@ const Reviews = () => {
       {/* Custom Navigation Buttons */}
       <button
         onClick={() => sliderRef?.slickPrev()}
-        className="absolute md:left-20 left-4 top-[50%] -translate-y-1/2 bg-white/80 p-2 rounded-full shadow-lg z-30 hover:bg-white transition-colors"
+        className="absolute md:left-60 left-4 top-[65%] -translate-y-1/2 bg-white/80 p-2 rounded-full shadow-lg z-30 hover:bg-white transition-colors"
         aria-label="Previous Slide"
       >
         <ChevronLeft className="w-6 h-6" />
       </button>
       <button
         onClick={() => sliderRef?.slickNext()}
-        className="absolute md:right-20 right-4 top-[50%] -translate-y-1/2 bg-white/80 p-2 rounded-full shadow-lg z-30 hover:bg-white transition-colors"
+        className="absolute md:right-60 right-4 top-[65%] -translate-y-1/2 bg-white/80 p-2 rounded-full shadow-lg z-30 hover:bg-white transition-colors"
         aria-label="Next Slide"
       >
         <ChevronRight className="w-6 h-6" />
