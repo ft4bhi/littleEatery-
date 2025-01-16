@@ -1,5 +1,8 @@
+"use client";
+
 import Link from "next/link";
 import Carousel from "./carousel";
+import { useRouter } from "next/navigation";
 
 const slides = [
   "./images/foodimg-1.jpeg",
@@ -16,6 +19,8 @@ const slides = [
 ];
 
 const mainsection = () => {
+  const router = useRouter();
+
   return (
     <div className=" md:w-full bg-white relative flex flex-col md:flex-row md:justify-around items-center justify-end h-[600px] md:h-full ">
       <div className=" w-full md:w-[50%]  flex flex-col px-10 md:px-20 z-30">
@@ -29,7 +34,7 @@ const mainsection = () => {
           easy.
         </div>
         <div className=" flex felx-col md:flex-row gap-4  h-[40px] mt-4">
-          <button className="lg:w-[120px]
+          <button onClick={() => { router.push("./menu") }} className="lg:w-[120px]
           md:w-[100px] w-[120px] p-2 rounded-3xl  text-white bg-[#f39945] hover:opacity-90">
             Menu
           </button>
@@ -118,13 +123,13 @@ const mainsection = () => {
           </Link>
         </div>
       </div>
-      <div  className="absolute top-0 md:relative  md:w-[400px] md:rounded-tl-3xl md:rounded-br-3xl md:rounded-md  overflow-hidden">
+      <div className="absolute top-0 md:relative  md:w-[400px] md:rounded-tl-3xl md:rounded-br-3xl md:rounded-md  overflow-hidden">
         <Carousel>
           {slides.map((s) => (
             <img src={s} className="object-cover w-full h-[600px] " />
           ))}
         </Carousel>
-        
+
       </div>
       <div className="md:hidden block  bg-gradient-to-t from-gray-900 to-transparent absolute inset-0 z-20  rounded-md h-full"></div>
     </div>
