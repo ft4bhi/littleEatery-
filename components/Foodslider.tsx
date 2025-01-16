@@ -48,32 +48,32 @@ const FoodSlider = () => {
     setDirection(1);
     setCurrentIndex((prev) => (prev + 1) % foodItems.length);
   };
-  
+
   const prevSlide = () => {
     setDirection(-1);
     setCurrentIndex((prev) => (prev - 1 + foodItems.length) % foodItems.length);
   };
-  
+
 
   const getVisibleItems = () => {
     const items = [];
     const totalItems = foodItems.length;
-    
+
     // Add previous 2 items
     for (let i = 2; i > 0; i--) {
       const index = (currentIndex - i + totalItems) % totalItems;
       items.push({ ...foodItems[index], position: -i });
     }
-    
+
     // Add current item
     items.push({ ...foodItems[currentIndex], position: 0 });
-    
+
     // Add next 2 items
     for (let i = 1; i <= 2; i++) {
       const index = (currentIndex + i) % totalItems;
       items.push({ ...foodItems[index], position: i });
     }
-    
+
     return items;
   };
 
@@ -81,15 +81,15 @@ const FoodSlider = () => {
     <div className="pt-10 mb-10 px-4 overflow-hidden relative">
       <p className="text-center text-[#EC994B] md:text-[20px] text-[16px]">-Popular Delivery-</p>
       <h2 className="text-center md:text-[40px] text-[30px] font-bold mb-6">Trending Food</h2>
-      
+
       <div className="relative h-[500px] max-w-6xl mx-auto">
         <div className="relative h-full flex items-center justify-center">
           {getVisibleItems().map((item) => {
             const position = item.position;
-            
+
             // Enhanced progressive scaling
             let zIndex = 5 - Math.abs(position);
-            
+
             let opacity, scale, translateX;
 
             // Adjust scaling and positioning based on distance from center
@@ -106,7 +106,7 @@ const FoodSlider = () => {
               scale = 0.7;
               translateX = position * 63 + '%';
             }
-            
+
             return (
               <div
                 key={item.id}
@@ -115,12 +115,12 @@ const FoodSlider = () => {
                   transform: `translateX(${translateX}) scale(${scale})`,
                   zIndex: zIndex,
                   opacity: opacity,
-                  
+
                 }}
               >
                 <div className="relative rounded-lg overflow-hidden shadow-lg">
-                  <img 
-                    src={item.img} 
+                  <img
+                    src={item.img}
                     alt={item.name}
                     className="h-[400px] w-full object-cover"
                   />
@@ -155,18 +155,17 @@ const FoodSlider = () => {
         </button>
       </div>
       <div className="absolute bottom-4 right-0 left-0 z-40">
-          <div className="flex items-center justify-center gap-2">
-            {foodItems.map((_, i) => (
-              <div
-                key={i}
-                onClick={() => setCurrentIndex(i)}
-                className={`cursor-pointer transition-all w-2 h-2 rounded-full ${
-                  currentIndex === i ? "bg-[#EC994b] p-2" : "bg-gray-500 bg-opacity-50"
+        <div className="flex items-center justify-center gap-2">
+          {foodItems.map((_, i) => (
+            <div
+              key={i}
+              onClick={() => setCurrentIndex(i)}
+              className={`cursor-pointer transition-all w-2 h-2 rounded-full ${currentIndex === i ? "bg-[#EC994b] p-2" : "bg-gray-500 bg-opacity-50"
                 }`}
-              />
-            ))}
-          </div>
+            />
+          ))}
         </div>
+      </div>
     </div>
   );
 };

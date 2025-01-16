@@ -80,9 +80,7 @@ const Navbar = () => {
             <Link href="/" className="hover:text-[#EA6D27]">
               Contact
             </Link>
-            <button className="w-[117px] h-[45px] bg-[#EA6D27] rounded-tl-lg rounded-br-lg text-white font-davidLibre flex items-center justify-center text-[15.5px] hover:bg-[#df631b] drop-shadow-lg">
-              MENU
-            </button>
+
           </div>
         </div>
       )}
